@@ -1,0 +1,73 @@
+<!--- Left INfo  --->
+<div class="three_block left-block direction_info">
+        
+        <div class="calc-intro">
+        
+        <div id="map_direction"></div>
+		
+        <h3>Moving From:</h3>  <p class="calc_left_info"> {{addressFrom.full_adr}}<span class="bs"> ({{request.typeFrom.text}})</span> </p> 
+        <h3>Moving To:</h3> <p class="calc_left_info">  {{addressTo.full_adr}}<span class="bs"> ({{request.typeTo.text}})</span></p>
+        <h3>Distance:</h3><p class="calc_left_info"> 11 miles </p> 
+       
+        <button  class="btn btn-default btn-3d" ng-Click="PrevStep('#edit-calculator-results')" type="button" id="back-to-calc-btn"><< Back to Calculator</button>
+       
+            
+        </div>
+        
+    </div>
+
+<!--- Main INFO --->
+
+    <div class="calc_block three_block form-block">
+        <div class="form_block calc-form">				
+				<div class="box_info general">
+				<div class="moving-date"><h3>Desired Move Date:</h3> <span>{{request.moveDate}}</span></div>
+				<div class="moving-date"><h3>Type of Service:</h3> <span>{{request.serviceType.text}}</span></div>
+				<div class="moving-date"><h3>Size of Move:</h3> <span class="long"> {{request.moveSize.text}}</span></div>						
+				<i class="rooms">{{request.rooms.text }}</i>		
+				</div>
+				<div class="box_info detailsinfo">
+				
+                    <div class="moving-date"><h3>Crew Size:</h3> <span> 3 movers</span></div>
+                    <div class="moving-date"><h3>Truck Size:</h3> <span> 16' Box</span></div>
+                    <div class="moving-date travel-time"><h3>Travel Time:</h3> <span> 30 min 
+                        <i class="tooltips  fa fa-info-circle"><div class="tips rmtips geninfo"><b>Travel Time</b> - time added to <b>Move Time</b> in order to compensate time spent traveling from our terminal to the shipper's point of origin and/or from the destination address back to our terminal.<br><b class="crossline">30 minutes minimum</b><b> Travel Time</b> is applied to all jobs in Greater Boston area.</div></i></span>
+                        </div>
+
+                    <div class="moving-date rate"><h3>Hourly Rate:</h3> <span> $160/hr <i class="tooltips fa fa-info-circle"><div class="tips rmtips hourly">This rate includes 3 movers and a 16' Box truck fully equipped with dollies, tools and a full line of boxes. We do not charge for the use of moving pads and tape to protect furniture, as well fuel, mileage and tolls.</div></i></span>
+                    </div> 
+
+
+                    <div class="moving-date est-time"><h3>Estimated Job Time:</h3> <span>2 hrs 45 min - 3 hrs 15 min <i class="tooltips fa fa-info-circle"><div class="tips rmtips estinfo"><b>Job Time = Move Time + Travel Time.</b><br><b>Move Time</b>&nbsp;starts once movers arrive to your origin address and ends when movers finish unloading at the destination address.<b><br> Lunch breaks will be deducted of your total&nbsp;<b>Job Time.</b></b></div></i></span>
+
+                    </div>				
+				</div>		
+				
+				<div class="moving-date est-quote"><h3>Estimated quote:</h3> <span>$440.00 - $520.00</span></div>
+            
+				
+        </div>
+    </div>
+
+
+<!--- Right BLock --->
+
+    <div class="three_block right-block">
+
+        <div id="calc-results2" >
+			 <div class="calc-intro-info">		 
+			  <h4>Estimated Quote</h4>
+                <hr>
+			  <p class="calc-intro_description"><b>Please note, this quote is just an estimate and provided for your convenience only.</b> We give you a database average for generally similar moves. It is best to consider this a thinking tool. <b>However: your final cost is based on hourly rate and actual time your move will take.</b> Additional&nbsp;time may be&nbsp;required if your move involves long walks from your apartment to the truck, narrow hallways and/or tight staircases, disassembling and reassembling of furniture, hoisting, moving of oversized, antiques items, ones with glass and/or marble, appliances move and items over 300lb. It is important to understand, that the move time will also depend on how well you are&nbsp;packed and organized: all drawers of all the furniture must be emptied,&nbsp;and&nbsp;all miscellaneous items packed neatly into moving boxes of correct sizes.</p>
+						
+<h4>Requesting Availability</h4>
+                <hr>
+	 <p class="calc-intro_description">Once you will submit availability request, you will have additional options to describe your move. Our support team member will update existing estimate with more precise one, based on your unique move details, and will let you know our current availability.</p>
+                 
+                 <button ng-Click="NextStep('#edit-calculator-results')" class="btn btn-primary btn-3d" type="button" id="go-to-info-btn" name="op" >Continue >></button>
+                 
+			</div>		
+        </div>
+      
+        
+    </div>
