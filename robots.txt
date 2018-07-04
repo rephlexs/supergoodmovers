@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 
+Disallow: /.well-known/
+Disallow: /elromco-min/
+Sitemap: https://supergoodmovers.com/sitemap.xml
